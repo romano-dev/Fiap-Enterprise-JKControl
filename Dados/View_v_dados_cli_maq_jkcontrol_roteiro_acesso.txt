@@ -1,0 +1,27 @@
+Para acessar a view pf0110.v_dados_cli_maq_jkcontrol siga os seguintes passos:
+----------------------------------------------------------------------------------------
+
+1) Acesse a ferramenta Oracle SQL*Developer
+
+2) Crie uma conexão com seu usuario FIAP (*esse usuário já deve ter sido disponibilizado pelo helpdesk fiap para vc)
+
+Usuario: rm<99999> *informe seu numero do RM
+Senha: informe sua senha. *default ddmmaa (dia mes e ano com 2 digitos de seu nascimento)
+
+Tipo de conexão: Básico
+
+Nome do Host: oracle.fiap.com.br
+Porta: 1521
+Instancia: ORCL
+
+3) Após preencher pressione o botão conectar e pronto, acesso liberado.
+
+4) para acessar a view digite como exemplo:
+
+select * from pf0110.v_dados_cli_maq_jkcontrol where cd_empresa = 7
+
+select  distinct cd_empresa,nm_fantasia,cd_maquina, nm_maquina, nr_serie_maquina, nr_ano_fabricacao,ds_voltagem 
+from pf0110.v_dados_cli_maq_jkcontrol where cd_empresa = 7 order by cd_maquina;
+
+5) Verifique os dados estão sendo exibidos.
+
